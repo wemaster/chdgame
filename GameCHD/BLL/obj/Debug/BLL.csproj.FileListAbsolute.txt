@@ -1,0 +1,7 @@
+D:\web moi\12112017\GameCHD\BLL\bin\Debug\BLL.dll
+D:\web moi\12112017\GameCHD\BLL\bin\Debug\BLL.pdb
+D:\web moi\12112017\GameCHD\BLL\bin\Debug\DAL.dll
+D:\web moi\12112017\GameCHD\BLL\bin\Debug\DAL.pdb
+D:\web moi\12112017\GameCHD\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\web moi\12112017\GameCHD\BLL\obj\Debug\BLL.dll
+D:\web moi\12112017\GameCHD\BLL\obj\Debug\BLL.pdb

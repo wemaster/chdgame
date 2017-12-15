@@ -1,0 +1,1002 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDD95405-D021-4843-A602-97FB861CBED7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebGame17</RootNamespace>
+    <AssemblyName>WebGame17</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CKEditor.NET, Version=3.6.6.2, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\WeGame - Copy\ChdGame\bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\chcheck-test.aspx" />
+    <Content Include="admin\chdau-don.aspx" />
+    <Content Include="admin\chdau-may.aspx" />
+    <Content Include="admin\chdau-nhom.aspx" />
+    <Content Include="admin\chhoc-sinh.aspx" />
+    <Content Include="admin\chphan-thuong.aspx" />
+    <Content Include="admin\chql-phong.aspx" />
+    <Content Include="admin\ckeditor\adapters\jquery.js" />
+    <Content Include="admin\ckeditor\CHANGES.html" />
+    <Content Include="admin\ckeditor\ckeditor.js" />
+    <Content Include="admin\ckeditor\ckeditor_basic.js" />
+    <Content Include="admin\ckeditor\config.js" />
+    <Content Include="admin\ckeditor\contents.css" />
+    <Content Include="admin\ckeditor\images\spacer.gif" />
+    <Content Include="admin\ckeditor\INSTALL.html" />
+    <Content Include="admin\ckeditor\lang\af.js" />
+    <Content Include="admin\ckeditor\lang\ar.js" />
+    <Content Include="admin\ckeditor\lang\bg.js" />
+    <Content Include="admin\ckeditor\lang\bn.js" />
+    <Content Include="admin\ckeditor\lang\bs.js" />
+    <Content Include="admin\ckeditor\lang\ca.js" />
+    <Content Include="admin\ckeditor\lang\cs.js" />
+    <Content Include="admin\ckeditor\lang\cy.js" />
+    <Content Include="admin\ckeditor\lang\da.js" />
+    <Content Include="admin\ckeditor\lang\de.js" />
+    <Content Include="admin\ckeditor\lang\el.js" />
+    <Content Include="admin\ckeditor\lang\en-au.js" />
+    <Content Include="admin\ckeditor\lang\en-ca.js" />
+    <Content Include="admin\ckeditor\lang\en-gb.js" />
+    <Content Include="admin\ckeditor\lang\en.js" />
+    <Content Include="admin\ckeditor\lang\eo.js" />
+    <Content Include="admin\ckeditor\lang\es.js" />
+    <Content Include="admin\ckeditor\lang\et.js" />
+    <Content Include="admin\ckeditor\lang\eu.js" />
+    <Content Include="admin\ckeditor\lang\fa.js" />
+    <Content Include="admin\ckeditor\lang\fi.js" />
+    <Content Include="admin\ckeditor\lang\fo.js" />
+    <Content Include="admin\ckeditor\lang\fr-ca.js" />
+    <Content Include="admin\ckeditor\lang\fr.js" />
+    <Content Include="admin\ckeditor\lang\gl.js" />
+    <Content Include="admin\ckeditor\lang\gu.js" />
+    <Content Include="admin\ckeditor\lang\he.js" />
+    <Content Include="admin\ckeditor\lang\hi.js" />
+    <Content Include="admin\ckeditor\lang\hr.js" />
+    <Content Include="admin\ckeditor\lang\hu.js" />
+    <Content Include="admin\ckeditor\lang\id.js" />
+    <Content Include="admin\ckeditor\lang\is.js" />
+    <Content Include="admin\ckeditor\lang\it.js" />
+    <Content Include="admin\ckeditor\lang\ja.js" />
+    <Content Include="admin\ckeditor\lang\ka.js" />
+    <Content Include="admin\ckeditor\lang\km.js" />
+    <Content Include="admin\ckeditor\lang\ko.js" />
+    <Content Include="admin\ckeditor\lang\ku.js" />
+    <Content Include="admin\ckeditor\lang\lt.js" />
+    <Content Include="admin\ckeditor\lang\lv.js" />
+    <Content Include="admin\ckeditor\lang\mk.js" />
+    <Content Include="admin\ckeditor\lang\mn.js" />
+    <Content Include="admin\ckeditor\lang\ms.js" />
+    <Content Include="admin\ckeditor\lang\nb.js" />
+    <Content Include="admin\ckeditor\lang\nl.js" />
+    <Content Include="admin\ckeditor\lang\no.js" />
+    <Content Include="admin\ckeditor\lang\pl.js" />
+    <Content Include="admin\ckeditor\lang\pt-br.js" />
+    <Content Include="admin\ckeditor\lang\pt.js" />
+    <Content Include="admin\ckeditor\lang\ro.js" />
+    <Content Include="admin\ckeditor\lang\ru.js" />
+    <Content Include="admin\ckeditor\lang\sk.js" />
+    <Content Include="admin\ckeditor\lang\sl.js" />
+    <Content Include="admin\ckeditor\lang\sr-latn.js" />
+    <Content Include="admin\ckeditor\lang\sr.js" />
+    <Content Include="admin\ckeditor\lang\sv.js" />
+    <Content Include="admin\ckeditor\lang\th.js" />
+    <Content Include="admin\ckeditor\lang\tr.js" />
+    <Content Include="admin\ckeditor\lang\ug.js" />
+    <Content Include="admin\ckeditor\lang\uk.js" />
+    <Content Include="admin\ckeditor\lang\vi.js" />
+    <Content Include="admin\ckeditor\lang\zh-cn.js" />
+    <Content Include="admin\ckeditor\lang\zh.js" />
+    <Content Include="admin\ckeditor\lang\_languages.js" />
+    <Content Include="admin\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="admin\ckeditor\LICENSE.html" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\cs.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\cy.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\da.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\de.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\el.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\eo.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\fa.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\fi.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\fr.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\gu.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\it.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\ku.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\lv.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\mk.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\nb.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\nl.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\no.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\pt-br.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\ro.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\sk.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\tr.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\ug.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\vi.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\zh-cn.js" />
+    <Content Include="admin\ckeditor\plugins\a11yhelp\lang\_translationstatus.txt" />
+    <Content Include="admin\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="admin\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="admin\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="admin\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\bg.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\cs.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\cy.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\da.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\de.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\el.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\eo.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\et.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\fa.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\fi.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\fr.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\gu.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\he.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\hr.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\it.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\ku.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\lv.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\nb.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\nl.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\no.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\pl.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\pt-br.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\sk.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\tr.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\ug.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\uk.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\vi.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\zh-cn.js" />
+    <Content Include="admin\ckeditor\plugins\devtools\lang\_translationstatus.txt" />
+    <Content Include="admin\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="admin\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="admin\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="admin\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="admin\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="admin\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="admin\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="admin\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="admin\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="admin\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="admin\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="admin\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="admin\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="admin\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="admin\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="admin\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="admin\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="admin\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="admin\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="admin\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="admin\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="admin\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="admin\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="admin\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="admin\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\bg.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\cs.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\cy.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\da.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\de.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\el.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\eo.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\et.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\fa.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\fi.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\fr.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\hr.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\it.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\ku.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\lv.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\nb.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\nl.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\no.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\pl.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\pt-br.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\sk.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\tr.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\ug.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\uk.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\vi.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\zh-cn.js" />
+    <Content Include="admin\ckeditor\plugins\placeholder\lang\_translationstatus.txt" />
+    <Content Include="admin\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="admin\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\preview\preview.html" />
+    <Content Include="admin\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="admin\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="admin\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="admin\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="admin\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\cs.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\cy.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\de.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\el.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\eo.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\et.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\fa.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\fi.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\fr.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\he.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\hr.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\it.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\ku.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\lv.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\nb.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\nl.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\no.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\pt-br.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\sk.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\tr.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\ug.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\zh-cn.js" />
+    <Content Include="admin\ckeditor\plugins\specialchar\lang\_translationstatus.txt" />
+    <Content Include="admin\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="admin\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="admin\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="admin\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="admin\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="admin\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="admin\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="admin\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="admin\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\bg.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\cs.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\cy.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\da.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\de.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\el.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\eo.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\et.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\fa.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\fi.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\fr.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\hr.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\it.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\ku.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\lv.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\mk.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\nb.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\nl.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\no.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\pl.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\pt-br.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\sk.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\tr.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\ug.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\uk.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\vi.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\zh-cn.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\lang\_translationstatus.txt" />
+    <Content Include="admin\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="admin\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="admin\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="admin\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="admin\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="admin\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="admin\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="admin\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="admin\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="admin\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="admin\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="admin\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="admin\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="admin\ckeditor\skins\kama\dialog.css" />
+    <Content Include="admin\ckeditor\skins\kama\editor.css" />
+    <Content Include="admin\ckeditor\skins\kama\icons.png" />
+    <Content Include="admin\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="admin\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="admin\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="admin\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="admin\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="admin\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="admin\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="admin\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="admin\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="admin\ckeditor\skins\kama\skin.js" />
+    <Content Include="admin\ckeditor\skins\kama\templates.css" />
+    <Content Include="admin\ckeditor\skins\office2003\dialog.css" />
+    <Content Include="admin\ckeditor\skins\office2003\editor.css" />
+    <Content Include="admin\ckeditor\skins\office2003\icons.png" />
+    <Content Include="admin\ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="admin\ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="admin\ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="admin\ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="admin\ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="admin\ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="admin\ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="admin\ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="admin\ckeditor\skins\office2003\skin.js" />
+    <Content Include="admin\ckeditor\skins\office2003\templates.css" />
+    <Content Include="admin\ckeditor\skins\v2\dialog.css" />
+    <Content Include="admin\ckeditor\skins\v2\editor.css" />
+    <Content Include="admin\ckeditor\skins\v2\icons.png" />
+    <Content Include="admin\ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="admin\ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="admin\ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="admin\ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="admin\ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="admin\ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="admin\ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="admin\ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="admin\ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="admin\ckeditor\skins\v2\skin.js" />
+    <Content Include="admin\ckeditor\skins\v2\templates.css" />
+    <Content Include="admin\ckeditor\themes\default\theme.js" />
+    <Content Include="admin\css\css.css" />
+    <Content Include="admin\css\metisMenu.css" />
+    <Content Include="admin\css\metisMenu.min.css" />
+    <Content Include="admin\css\sb-admin-2.css" />
+    <Content Include="admin\css\sb-admin-2.min.css" />
+    <Content Include="admin\Default.aspx" />
+    <Content Include="admin\img\level\1.png" />
+    <Content Include="admin\img\level\10.png" />
+    <Content Include="admin\img\level\11.png" />
+    <Content Include="admin\img\level\12.png" />
+    <Content Include="admin\img\level\13.png" />
+    <Content Include="admin\img\level\14.png" />
+    <Content Include="admin\img\level\15.png" />
+    <Content Include="admin\img\level\16.png" />
+    <Content Include="admin\img\level\17.png" />
+    <Content Include="admin\img\level\18.png" />
+    <Content Include="admin\img\level\19.png" />
+    <Content Include="admin\img\level\2.png" />
+    <Content Include="admin\img\level\20.png" />
+    <Content Include="admin\img\level\21.png" />
+    <Content Include="admin\img\level\22.png" />
+    <Content Include="admin\img\level\23.png" />
+    <Content Include="admin\img\level\24.png" />
+    <Content Include="admin\img\level\25.png" />
+    <Content Include="admin\img\level\26.png" />
+    <Content Include="admin\img\level\27.png" />
+    <Content Include="admin\img\level\28.png" />
+    <Content Include="admin\img\level\29.png" />
+    <Content Include="admin\img\level\3.png" />
+    <Content Include="admin\img\level\30.png" />
+    <Content Include="admin\img\level\31.png" />
+    <Content Include="admin\img\level\32.png" />
+    <Content Include="admin\img\level\33.png" />
+    <Content Include="admin\img\level\34.png" />
+    <Content Include="admin\img\level\35.png" />
+    <Content Include="admin\img\level\36.png" />
+    <Content Include="admin\img\level\37.png" />
+    <Content Include="admin\img\level\38.png" />
+    <Content Include="admin\img\level\39.png" />
+    <Content Include="admin\img\level\4.png" />
+    <Content Include="admin\img\level\40.png" />
+    <Content Include="admin\img\level\41.png" />
+    <Content Include="admin\img\level\42.png" />
+    <Content Include="admin\img\level\43.png" />
+    <Content Include="admin\img\level\44.png" />
+    <Content Include="admin\img\level\45.png" />
+    <Content Include="admin\img\level\46.png" />
+    <Content Include="admin\img\level\47.png" />
+    <Content Include="admin\img\level\48.png" />
+    <Content Include="admin\img\level\49.png" />
+    <Content Include="admin\img\level\5.png" />
+    <Content Include="admin\img\level\50.png" />
+    <Content Include="admin\img\level\51.png" />
+    <Content Include="admin\img\level\52.png" />
+    <Content Include="admin\img\level\53.png" />
+    <Content Include="admin\img\level\54.png" />
+    <Content Include="admin\img\level\55.png" />
+    <Content Include="admin\img\level\56.png" />
+    <Content Include="admin\img\level\57.png" />
+    <Content Include="admin\img\level\58.png" />
+    <Content Include="admin\img\level\59.png" />
+    <Content Include="admin\img\level\6.png" />
+    <Content Include="admin\img\level\60.png" />
+    <Content Include="admin\img\level\61.png" />
+    <Content Include="admin\img\level\62.png" />
+    <Content Include="admin\img\level\63.png" />
+    <Content Include="admin\img\level\64.png" />
+    <Content Include="admin\img\level\65.png" />
+    <Content Include="admin\img\level\66.png" />
+    <Content Include="admin\img\level\67.png" />
+    <Content Include="admin\img\level\68.png" />
+    <Content Include="admin\img\level\69.png" />
+    <Content Include="admin\img\level\7.png" />
+    <Content Include="admin\img\level\70.png" />
+    <Content Include="admin\img\level\71.png" />
+    <Content Include="admin\img\level\72.png" />
+    <Content Include="admin\img\level\73.png" />
+    <Content Include="admin\img\level\74.png" />
+    <Content Include="admin\img\level\75.png" />
+    <Content Include="admin\img\level\76.png" />
+    <Content Include="admin\img\level\77.png" />
+    <Content Include="admin\img\level\78.png" />
+    <Content Include="admin\img\level\79.png" />
+    <Content Include="admin\img\level\8.png" />
+    <Content Include="admin\img\level\80.png" />
+    <Content Include="admin\img\level\81.png" />
+    <Content Include="admin\img\level\82.png" />
+    <Content Include="admin\img\level\83.png" />
+    <Content Include="admin\img\level\84.png" />
+    <Content Include="admin\img\level\85.png" />
+    <Content Include="admin\img\level\86.png" />
+    <Content Include="admin\img\level\87.png" />
+    <Content Include="admin\img\level\88.png" />
+    <Content Include="admin\img\level\89.png" />
+    <Content Include="admin\img\level\9.png" />
+    <Content Include="admin\img\level\90.png" />
+    <Content Include="admin\img\level\91.png" />
+    <Content Include="admin\img\level\92.png" />
+    <Content Include="admin\img\level\93.png" />
+    <Content Include="admin\img\level\94.png" />
+    <Content Include="admin\img\level\95.png" />
+    <Content Include="admin\img\level\96.png" />
+    <Content Include="admin\img\level\97.png" />
+    <Content Include="admin\img\level\98.png" />
+    <Content Include="admin\img\level\99.png" />
+    <Content Include="admin\img\level\lv.png" />
+    <Content Include="admin\js\jsnav.js" />
+    <Content Include="chd-event.aspx" />
+    <Content Include="chd-join.aspx" />
+    <Content Include="Content\ChatStyle.css" />
+    <Content Include="img\11.png" />
+    <Content Include="img\Ball.gif" />
+    <Content Include="img\Balldis.png" />
+    <Content Include="img\disable.gif" />
+    <Content Include="img\div6.gif" />
+    <Content Include="img\enable.gif" />
+    <Content Include="img\False.png" />
+    <Content Include="img\join.gif" />
+    <Content Include="img\map.jpg" />
+    <Content Include="img\vip\nu\2.png" />
+    <Content Include="index.html" />
+    <Content Include="index.Master" />
+    <Content Include="admin\admin.Master" />
+    <Content Include="admin\ckeditor\.htaccess" />
+    <None Include="Properties\PublishProfiles\pro.pubxml" />
+    <None Include="Properties\PublishProfiles\webduc.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\animate-custom.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\1.png" />
+    <Content Include="img\44.png" />
+    <Content Include="img\boss\1.png" />
+    <Content Include="img\boss\10.png" />
+    <Content Include="img\boss\11.png" />
+    <Content Include="img\boss\2.png" />
+    <Content Include="img\boss\3.png" />
+    <Content Include="img\boss\4.png" />
+    <Content Include="img\boss\5.png" />
+    <Content Include="img\boss\6.png" />
+    <Content Include="img\boss\7.png" />
+    <Content Include="img\boss\8.png" />
+    <Content Include="img\boss\9.png" />
+    <Content Include="img\cc.jpg" />
+    <Content Include="img\gold\Ph03nyx-Super-Mario-Question-Coin.png" />
+    <Content Include="img\huanchuong\7e2dedce_md.gif" />
+    <Content Include="img\huanchuong\th_23-10.gif" />
+    <Content Include="img\Kindred.png" />
+    <Content Include="img\level\1.png" />
+    <Content Include="img\level\10.png" />
+    <Content Include="img\level\11.png" />
+    <Content Include="img\level\12.png" />
+    <Content Include="img\level\13.png" />
+    <Content Include="img\level\14.png" />
+    <Content Include="img\level\15.png" />
+    <Content Include="img\level\16.png" />
+    <Content Include="img\level\17.png" />
+    <Content Include="img\level\18.png" />
+    <Content Include="img\level\19.png" />
+    <Content Include="img\level\2.png" />
+    <Content Include="img\level\20.png" />
+    <Content Include="img\level\21.png" />
+    <Content Include="img\level\22.png" />
+    <Content Include="img\level\23.png" />
+    <Content Include="img\level\24.png" />
+    <Content Include="img\level\25.png" />
+    <Content Include="img\level\26.png" />
+    <Content Include="img\level\27.png" />
+    <Content Include="img\level\28.png" />
+    <Content Include="img\level\29.png" />
+    <Content Include="img\level\3.png" />
+    <Content Include="img\level\30.png" />
+    <Content Include="img\level\31.png" />
+    <Content Include="img\level\32.png" />
+    <Content Include="img\level\33.png" />
+    <Content Include="img\level\34.png" />
+    <Content Include="img\level\35.png" />
+    <Content Include="img\level\36.png" />
+    <Content Include="img\level\37.png" />
+    <Content Include="img\level\38.png" />
+    <Content Include="img\level\39.png" />
+    <Content Include="img\level\4.png" />
+    <Content Include="img\level\40.png" />
+    <Content Include="img\level\41.png" />
+    <Content Include="img\level\42.png" />
+    <Content Include="img\level\43.png" />
+    <Content Include="img\level\44.png" />
+    <Content Include="img\level\45.png" />
+    <Content Include="img\level\46.png" />
+    <Content Include="img\level\47.png" />
+    <Content Include="img\level\48.png" />
+    <Content Include="img\level\49.png" />
+    <Content Include="img\level\5.png" />
+    <Content Include="img\level\50.png" />
+    <Content Include="img\level\51.png" />
+    <Content Include="img\level\52.png" />
+    <Content Include="img\level\53.png" />
+    <Content Include="img\level\54.png" />
+    <Content Include="img\level\55.png" />
+    <Content Include="img\level\56.png" />
+    <Content Include="img\level\57.png" />
+    <Content Include="img\level\58.png" />
+    <Content Include="img\level\59.png" />
+    <Content Include="img\level\6.png" />
+    <Content Include="img\level\60.png" />
+    <Content Include="img\level\61.png" />
+    <Content Include="img\level\62.png" />
+    <Content Include="img\level\63.png" />
+    <Content Include="img\level\64.png" />
+    <Content Include="img\level\65.png" />
+    <Content Include="img\level\66.png" />
+    <Content Include="img\level\67.png" />
+    <Content Include="img\level\68.png" />
+    <Content Include="img\level\69.png" />
+    <Content Include="img\level\7.png" />
+    <Content Include="img\level\70.png" />
+    <Content Include="img\level\71.png" />
+    <Content Include="img\level\72.png" />
+    <Content Include="img\level\73.png" />
+    <Content Include="img\level\74.png" />
+    <Content Include="img\level\75.png" />
+    <Content Include="img\level\76.png" />
+    <Content Include="img\level\77.png" />
+    <Content Include="img\level\78.png" />
+    <Content Include="img\level\79.png" />
+    <Content Include="img\level\8.png" />
+    <Content Include="img\level\80.png" />
+    <Content Include="img\level\81.png" />
+    <Content Include="img\level\82.png" />
+    <Content Include="img\level\83.png" />
+    <Content Include="img\level\84.png" />
+    <Content Include="img\level\85.png" />
+    <Content Include="img\level\86.png" />
+    <Content Include="img\level\87.png" />
+    <Content Include="img\level\88.png" />
+    <Content Include="img\level\89.png" />
+    <Content Include="img\level\9.png" />
+    <Content Include="img\level\90.png" />
+    <Content Include="img\level\91.png" />
+    <Content Include="img\level\92.png" />
+    <Content Include="img\level\93.png" />
+    <Content Include="img\level\94.png" />
+    <Content Include="img\level\95.png" />
+    <Content Include="img\level\96.png" />
+    <Content Include="img\level\97.png" />
+    <Content Include="img\level\98.png" />
+    <Content Include="img\level\99.png" />
+    <Content Include="img\level\lv.png" />
+    <Content Include="img\pet\1.png" />
+    <Content Include="img\pet\11.png" />
+    <Content Include="img\pet\13.png" />
+    <Content Include="img\pet\14.png" />
+    <Content Include="img\pet\15.png" />
+    <Content Include="img\pet\16.png" />
+    <Content Include="img\pet\17.png" />
+    <Content Include="img\pet\18.png" />
+    <Content Include="img\pet\19.png" />
+    <Content Include="img\pet\2.png" />
+    <Content Include="img\pet\20.png" />
+    <Content Include="img\pet\21.png" />
+    <Content Include="img\pet\22.png" />
+    <Content Include="img\pet\23.png" />
+    <Content Include="img\pet\24.png" />
+    <Content Include="img\pet\25.png" />
+    <Content Include="img\pet\26.png" />
+    <Content Include="img\pet\27.png" />
+    <Content Include="img\pet\28.png" />
+    <Content Include="img\pet\29.png" />
+    <Content Include="img\pet\3.png" />
+    <Content Include="img\pet\30.png" />
+    <Content Include="img\pet\31.png" />
+    <Content Include="img\pet\32.png" />
+    <Content Include="img\pet\34.png" />
+    <Content Include="img\pet\4.png" />
+    <Content Include="img\pet\5.png" />
+    <Content Include="img\pet\6.png" />
+    <Content Include="img\pet\7.png" />
+    <Content Include="img\pet\8.png" />
+    <Content Include="img\pet\9.png" />
+    <Content Include="img\pet\nature3.gif" />
+    <Content Include="img\pet\soi2.gif" />
+    <Content Include="img\rank\0.png" />
+    <Content Include="img\rank\1.png" />
+    <Content Include="img\rank\9Gkk9.png" />
+    <Content Include="img\rank\ar.png" />
+    <Content Include="img\rank\aRw8b.png" />
+    <Content Include="img\rank\Badge_Challenger.png" />
+    <Content Include="img\rank\bronze_1.png" />
+    <Content Include="img\rank\Bronze_II.png" />
+    <Content Include="img\rank\Bronze_III.png" />
+    <Content Include="img\rank\bronze_iv.png" />
+    <Content Include="img\rank\Bronze_V.png" />
+    <Content Include="img\rank\challengericon.png" />
+    <Content Include="img\rank\division_1_silver_tier_league_of_legends_emblem_by_narishm-d6u3akw.png" />
+    <Content Include="img\rank\Fo9m0.png" />
+    <Content Include="img\rank\images.jpg" />
+    <Content Include="img\rank\master-rewards-lol.png" />
+    <Content Include="img\rank\master.png" />
+    <Content Include="img\rank\post-12900-0-12757500-1438055330.png" />
+    <Content Include="img\rank\Season-1-start-Tiers.png" />
+    <Content Include="img\rank\uBfr1.png" />
+    <Content Include="img\rank\YoHxi.png" />
+    <Content Include="img\rank\zMhna.png" />
+    <Content Include="img\true.png" />
+    <Content Include="img\vip\nam\3.png" />
+    <Content Include="img\vong\1.gif" />
+    <Content Include="img\vong\17.gif" />
+    <Content Include="img\vong\2.gif" />
+    <Content Include="img\vong\23.gif" />
+    <Content Include="img\vong\25.png" />
+    <Content Include="img\vong\3.gif" />
+    <Content Include="img\vong\4.gif" />
+    <Content Include="img\vong\5.gif" />
+    <Content Include="img\yes.png" />
+    <Content Include="join-room.aspx" />
+    <Content Include="mem-login.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.bootstrap.wizard.js" />
+    <Content Include="Scripts\jquery.bootstrap.wizard.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
+    <Content Include="Scripts\MathJax.js" />
+    <Content Include="Scripts\particles.min.js" />
+    <Content Include="test.html" />
+    <Content Include="view-mem.aspx" />
+    <Content Include="war-nor.aspx" />
+    <Content Include="war-room.aspx" />
+    <Content Include="war-xh.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\chcheck-test.aspx.cs">
+      <DependentUpon>chcheck-test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\chcheck-test.aspx.designer.cs">
+      <DependentUpon>chcheck-test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\chdau-don.aspx.cs">
+      <DependentUpon>chdau-don.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\chdau-don.aspx.designer.cs">
+      <DependentUpon>chdau-don.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\chdau-may.aspx.cs">
+      <DependentUpon>chdau-may.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\chdau-may.aspx.designer.cs">
+      <DependentUpon>chdau-may.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\chdau-nhom.aspx.cs">
+      <DependentUpon>chdau-nhom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\chdau-nhom.aspx.designer.cs">
+      <DependentUpon>chdau-nhom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\chhoc-sinh.aspx.cs">
+      <DependentUpon>chhoc-sinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\chhoc-sinh.aspx.designer.cs">
+      <DependentUpon>chhoc-sinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\chphan-thuong.aspx.cs">
+      <DependentUpon>chphan-thuong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\chphan-thuong.aspx.designer.cs">
+      <DependentUpon>chphan-thuong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\chql-phong.aspx.cs">
+      <DependentUpon>chql-phong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\chql-phong.aspx.designer.cs">
+      <DependentUpon>chql-phong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChatHub.cs" />
+    <Compile Include="chd-event.aspx.cs">
+      <DependentUpon>chd-event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chd-event.aspx.designer.cs">
+      <DependentUpon>chd-event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chd-join.aspx.cs">
+      <DependentUpon>chd-join.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chd-join.aspx.designer.cs">
+      <DependentUpon>chd-join.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.Master.cs">
+      <DependentUpon>index.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.Master.designer.cs">
+      <DependentUpon>index.Master</DependentUpon>
+    </Compile>
+    <Compile Include="join-room.aspx.cs">
+      <DependentUpon>join-room.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="join-room.aspx.designer.cs">
+      <DependentUpon>join-room.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mem-login.aspx.cs">
+      <DependentUpon>mem-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mem-login.aspx.designer.cs">
+      <DependentUpon>mem-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyHub.cs" />
+    <Compile Include="NotificationHub.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="view-mem.aspx.cs">
+      <DependentUpon>view-mem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view-mem.aspx.designer.cs">
+      <DependentUpon>view-mem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAccHub.cs" />
+    <Compile Include="war-nor.aspx.cs">
+      <DependentUpon>war-nor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="war-nor.aspx.designer.cs">
+      <DependentUpon>war-nor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="war-room.aspx.cs">
+      <DependentUpon>war-room.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="war-room.aspx.designer.cs">
+      <DependentUpon>war-room.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="war-xh.aspx.cs">
+      <DependentUpon>war-xh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="war-xh.aspx.designer.cs">
+      <DependentUpon>war-xh.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{20d46698-426b-4a25-b812-7c63981bf242}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51392</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51392/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

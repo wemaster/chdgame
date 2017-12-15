@@ -1,0 +1,5 @@
+D:\web moi\12112017\GameCHD\DAL\bin\Debug\DAL.dll
+D:\web moi\12112017\GameCHD\DAL\bin\Debug\DAL.pdb
+D:\web moi\12112017\GameCHD\DAL\obj\Debug\DAL.dll
+D:\web moi\12112017\GameCHD\DAL\obj\Debug\DAL.pdb
+D:\web moi\12112017\GameCHD\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
